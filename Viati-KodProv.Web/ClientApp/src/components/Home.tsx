@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { createMusicService, IMusicService, IMusicServiceFilter } from '../services/musicService';
+import { IMusicService, IMusicServiceFilter } from '../services/musicService';
 import { Col, Spinner, Alert } from 'reactstrap';
 import { LabelDetails } from './LabelComponents/LabelDetails'
 import { Route, Switch } from 'react-router';
