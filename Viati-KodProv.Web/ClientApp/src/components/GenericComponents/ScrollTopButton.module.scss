@@ -1,0 +1,31 @@
+@import '../../styles/viati.styles.scss';
+
+$border-size: 6px solid;
+
+%border-arrow {
+    border-top: $border-size $viati-green-dimmed;
+    border-right: $border-size $viati-green-dimmed;
+    transform: rotate(-45deg);
+}
+
+.scrollTopButton {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    cursor: pointer;
+    
+    &:hover {
+        transform: scale(1.1);
+
+        &:hover > * {
+            border-top: $border-size $viati-green;
+            border-right: $border-size $viati-green;
+        }
+    }
+}
+
+.scrollTopButton > * {
+    height: 20px;
+    width: 20px;
+    @extend %border-arrow;
+}
