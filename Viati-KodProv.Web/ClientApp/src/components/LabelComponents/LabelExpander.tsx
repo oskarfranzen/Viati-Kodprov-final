@@ -29,7 +29,7 @@ export const LabelExpander: React.FunctionComponent<ILabelExpanderProps> = ({ la
                                 )}
                             </CardBody>
                             <CardFooter>
-                                <Link to={commons.constants.labelPath + encodeURI(label.labelName)}>Details</Link>
+                                <Link to={commons.constants.labelPath + encodeURIComponent(label.labelName)}>Details</Link>
                             </CardFooter>
                         </>
                     }

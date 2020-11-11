@@ -93,7 +93,8 @@ export const Home: React.FunctionComponent<IHomeProps> = ({ musicService }) => {
       {!state.unexpectedError && !state.isLoading && (
         <Switch>
           <Route exact path={commons.constants.labelPath + ':id'} render={({ match }) => {
-            const labelDetail = commons.helpers.findLabelByName(state.labels, match.params.id);
+            const id = decodeURIComponent(match.params.id);
+            const labelDetail = commons.helpers.findLabelByName(state.labels, id);
             return <LabelDetails label={labelDetail} />
           }}
           />
